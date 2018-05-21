@@ -1,5 +1,5 @@
 <!DOCTYPE=HTML>
-<head><link rel="icon" style="width:18px;height:18px"type="image/icon" href="${pageContext.request.contextPath}/media.png">
+<head><link rel="icon" type="image/icon" href="${pageContext.request.contextPath}/icon.png">
 </head>
 <%@include file="Shared/Header.jsp" %>
 

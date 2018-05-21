@@ -5,10 +5,14 @@
  */
 package com.sem.project.dao;
 
+import com.sem.project.entity.Voter;
+
+
 /**
  *
  * @author sapu
  */
-public interface VoterDAO {
+public interface VoterDAO extends GenericDAO<Voter>{
+    
     
 }

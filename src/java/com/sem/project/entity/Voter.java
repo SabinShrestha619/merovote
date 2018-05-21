@@ -10,23 +10,30 @@ package com.sem.project.entity;
  * @author sapu
  */
 public class Voter {
-    int voterId,citizenshipNo,uniqueId;
-    String firstName,lastName,gender,maritalStatus,address,email;
+    int voterId,citizenshipNo,phoneNo;
+    String firstName,lastName,gender,maritalStatus,address,email,uniqueId,password,photo,confirmPassword;
 
     public Voter() {
     }
 
-    public Voter(int voterId, int citizenshipNo, int uniqueId, String firstName, String lastName, String gender, String maritalStatus, String address, String email) {
+    public Voter(int voterId, int citizenshipNo, int phoneNo, String firstName, String lastName, String gender, String maritalStatus, String address, String email, String uniqueId, String password, String photo, String confirmPassword) {
         this.voterId = voterId;
         this.citizenshipNo = citizenshipNo;
-        this.uniqueId = uniqueId;
+        this.phoneNo = phoneNo;
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
         this.maritalStatus = maritalStatus;
         this.address = address;
         this.email = email;
+        this.uniqueId = uniqueId;
+        this.password = password;
+        this.photo = photo;
+        this.confirmPassword = confirmPassword;
     }
+
+    
+   
 
     public int getVoterId() {
         return voterId;
@@ -36,7 +43,7 @@ public class Voter {
         return citizenshipNo;
     }
 
-    public int getUniqueId() {
+    public String getUniqueId() {
         return uniqueId;
     }
 
@@ -72,7 +79,7 @@ public class Voter {
         this.citizenshipNo = citizenshipNo;
     }
 
-    public void setUniqueId(int uniqueId) {
+    public void setUniqueId(String uniqueId) {
         this.uniqueId = uniqueId;
     }
 
@@ -98,6 +105,38 @@ public class Voter {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+
+    public String getConfirmPassword() {
+        return confirmPassword;
+    }
+
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
+    }
+
+    public int getPhoneNo() {
+        return phoneNo;
+    }
+
+    public void setPhoneNo(int phoneNo) {
+        this.phoneNo = phoneNo;
     }
     
     

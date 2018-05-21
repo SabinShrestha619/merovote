@@ -39,7 +39,7 @@
         </div>
         <!-- /.row -->
     </div>
-    <form style="width: 60%;margin: auto;" class="form-horizontal" border="1" action="" method="post">
+    <form style="width: 60%;margin: auto;" class="form-horizontal" border="1" action="../RegisterVoterServlet" method="post">
         <div class="form-group">
             <label class="control-label col-xs-3" for="firstName">First Name:</label>
             <div class="col-xs-9">
@@ -135,6 +135,12 @@
             </div>
         </div>
 
+        <div align="left" class="form-group" >
+            <label class="control-label col-xs-3" for="exampleInputFile">Upload Photo:</label>
+            <div class="col-xs-9" >
+                <input type="file" name="file" id="file" required>
+            </div>
+        </div>
         <div align="left" class="form-group">
             <div class="col-xs-offset-3 col-xs-9">
                 <label class="checkbox-inline">
@@ -145,14 +151,8 @@
         <div align="left" class="form-group">
             <div class="col-xs-offset-3 col-xs-9">
                 <label class="checkbox-inline">
-                    <input type="checkbox" value="agree">  I agree to the <a href="#">Terms and Conditions</a>.
+                    <input type="checkbox" value="agree" required="required">  I agree to the <a href="#">Terms and Conditions</a>.
                 </label>
-            </div>
-        </div>
-        <div align="left" class="form-group" >
-            <label class="control-label col-xs-3" for="exampleInputFile">Upload Photo:</label>
-            <div class="col-xs-9" >
-                <input type="file" name="file" id="file" required>
             </div>
         </div>
 
