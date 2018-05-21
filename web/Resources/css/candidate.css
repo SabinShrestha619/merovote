@@ -1,0 +1,15 @@
+#main{
+	cursor: default;
+}
+#person{
+	cursor: default;
+}
+.list-group{
+	display: inline-block;
+	width: 45%;
+	margin-left: 20px;
+}
+
+#history{
+	margin: 20px;
+}
