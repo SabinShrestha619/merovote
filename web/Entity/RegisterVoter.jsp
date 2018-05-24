@@ -87,21 +87,7 @@
         <div class="form-group">
             <label  class="control-label col-xs-3">Date of Birth:</label>
             <div class="col-xs-3">
-                <input type="Number" class="form-control" id="day" placeholder="Date" >
-
-
-            </div>
-            <div class="col-xs-3" >
-                <select class="form-control">
-                    <option>Month</option>
-                    <option>Jan</option>
-                    <option>Feb</option> 
-                    <option>Mar</option>
-                    <option>Apr</option>
-                </select>
-            </div>
-            <div class="col-xs-3">
-                <input type="Number" class="form-control" name="year" placeholder="Year" autocomplete="on">
+                <input type="text" class="form-control" name="date" placeholder="Date DD/MM/YY" >
             </div>
         </div>
         <div class="form-group">

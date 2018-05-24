@@ -19,7 +19,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="${pageContext.request.contextPath}/index.jsp">
-                <img src="${pageContext.request.contextPath}/Images/merologo.png" width="120px" alt="LOGO">
+                <img src="${pageContext.request.contextPath}/Images/logo.png" width="120px" alt="LOGO">
             </a>
         </div>
 

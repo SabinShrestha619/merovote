@@ -11,12 +11,12 @@ package com.sem.project.entity;
  */
 public class Voter {
     int voterId,citizenshipNo,phoneNo;
-    String firstName,lastName,gender,maritalStatus,address,email,uniqueId,password,photo,confirmPassword;
+    String firstName,lastName,gender,maritalStatus,address,email,uniqueId,password,photo,confirmPassword,dateOfBirth;
 
     public Voter() {
     }
 
-    public Voter(int voterId, int citizenshipNo, int phoneNo, String firstName, String lastName, String gender, String maritalStatus, String address, String email, String uniqueId, String password, String photo, String confirmPassword) {
+    public Voter(int voterId, int citizenshipNo, int phoneNo, String firstName, String lastName, String gender, String maritalStatus, String address, String email, String uniqueId, String password, String photo, String confirmPassword, String dateOfBirth) {
         this.voterId = voterId;
         this.citizenshipNo = citizenshipNo;
         this.phoneNo = phoneNo;
@@ -30,9 +30,17 @@ public class Voter {
         this.password = password;
         this.photo = photo;
         this.confirmPassword = confirmPassword;
+        this.dateOfBirth = dateOfBirth;
     }
 
-    
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
    
 
     public int getVoterId() {

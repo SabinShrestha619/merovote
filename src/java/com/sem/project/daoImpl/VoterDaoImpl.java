@@ -13,6 +13,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  *
@@ -49,9 +50,11 @@ public class VoterDaoImpl implements VoterDAO {
 
     @Override
     public int insert(Voter t) throws SQLException, ClassNotFoundException {
-        String sql = "insert into register_voter(voterId, citizenshipNo, uniqueId, firstName, lastName, gender, maritalStatus, address, email, password, confirmPassword,	phoneNo, photo) "
-                + "values(1,?,?,?,?,?,?,?,?,?,?,?,?)";
-        t.setUniqueId("as");
+        String sql = "insert into register_voter( citizenshipNo, uniqueId, firstName, lastName, gender, maritalStatus, address, email, password, confirmPassword,	phoneNo, photo) "
+                + "values(?,?,?,?,?,?,?,?,?,?,?,?)";
+        String uniqueID = UUID.randomUUID().toString();
+        
+        t.setUniqueId(uniqueID);
         t.setMaritalStatus("fsda");
         t.setAddress("dfa");
         t.setPhoto("10");

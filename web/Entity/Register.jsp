@@ -79,7 +79,7 @@
         <div align="center">
             <div class="bs-example"  class="container">
                 <h1>Registration Form</h1>
-                <form class="form-horizontal" border="1" action="" method="post">
+                <form class="form-horizontal" border="1" action="../RegisterVoterServlet" method="post">
                     <div class="form-group">
                         <label class="control-label col-xs-3" for="firstName">First Name:</label>
                         <div class="col-xs-9">
