@@ -45,9 +45,8 @@
                  <li>
                     <a href="#" data-toggle="collapse" data-target="#submenu-3"><i class="fa fa-fw fa-star"></i>  Candidates<i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-3" class="collapse">
-                        <li><a href="${pageContext.request.contextPath}/Entity/candidate.jsp"><i class="fa fa-angle-double-right"></i> Personal Info</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> Political Info</a></li>
-                    </ul>
+                        <li><a href="${pageContext.request.contextPath}/Entity/candidate.jsp"><i class="fa fa-angle-double-right">Candidate Info</i></a></li>
+                        </ul>
                 </li>
                 <li>
                     <a href="${pageContext.request.contextPath}/Entity/Vote.jsp"><i class="fa fa-fw fa-thumbs-up"></i>  Cast Vote</a>

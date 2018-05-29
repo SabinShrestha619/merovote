@@ -39,7 +39,7 @@
         </div>
         <!-- /.row -->
     </div>
-    <form style="width: 60%;margin: auto;" class="form-horizontal" border="1" action="../RegisterCandidateServlet" method="post">
+    <form style="width: 60%;margin: auto;" class="form-horizontal" border="1" action="../RegisterVoterServlet" method="post">
         <div class="form-group">
             <label class="control-label col-xs-3" for="firstName">First Name:</label>
             <div class="col-xs-9">
@@ -59,15 +59,15 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label col-xs-3" for="party">Party:</label>
+            <label class="control-label col-xs-3" for="password">Password:</label>
             <div class="col-xs-9">
-                <input type="password" class="form-control" name="party" placeholder="Party" required>
+                <input type="password" class="form-control" name="password" placeholder="Password" required>
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label col-xs-3" for="Post">Post:</label>
+            <label class="control-label col-xs-3" for="ConfirmPassword">Confirm Password:</label>
             <div class="col-xs-9">
-                <input type="password" class="form-control" name="post" placeholder="post" required>
+                <input type="password" class="form-control" name="confirmPassword" placeholder="Password" required>
             </div>
         </div>
         <div class="form-group">
@@ -85,9 +85,9 @@
             </div>
         </div>
         <div class="form-group">
-            <label  class="control-label col-xs-3">Age:</label>
+            <label  class="control-label col-xs-3">Date of Birth:</label>
             <div class="col-xs-3">
-                <input type="Number" class="form-control" name="age" placeholder="Age" >
+                <input type="text" class="form-control" name="date" placeholder="Date DD/MM/YY" >
             </div>
         </div>
         <div class="form-group">
@@ -106,10 +106,10 @@
         <div class="form-group">
             <label class="control-label col-xs-3" for="MaritalStatus">Marital Status:</label>
             <div class="col-xs-6" >
-                <select class="form-control" name="maritalstatus">
+                <select class="form-control">
                     <option>Marital Status</option>
-                    <option value="Married">Married</option>
-                    <option value="Single">Single</option>
+                    <option>Married</option>
+                    <option>Single</option>
                 </select>
             </div>
         </div>
@@ -121,11 +121,24 @@
             </div>
         </div>
 
- 
         <div align="left" class="form-group" >
             <label class="control-label col-xs-3" for="exampleInputFile">Upload Photo:</label>
             <div class="col-xs-9" >
                 <input type="file" name="file" id="file" required>
+            </div>
+        </div>
+        <div align="left" class="form-group">
+            <div class="col-xs-offset-3 col-xs-9">
+                <label class="checkbox-inline">
+                    <input type="checkbox" value="news"> Send me latest news and updates.
+                </label>
+            </div>
+        </div>
+        <div align="left" class="form-group">
+            <div class="col-xs-offset-3 col-xs-9">
+                <label class="checkbox-inline">
+                    <input type="checkbox" value="agree" required="required">  I agree to the <a href="#">Terms and Conditions</a>.
+                </label>
             </div>
         </div>
 

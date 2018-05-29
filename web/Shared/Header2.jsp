@@ -42,7 +42,7 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
                 <li>
-                    <a href="${pageContext.request.contextPath}/Entity/RegisterVoter.jsp"> <i class="fa fa-fw fa-user-plus"></i> Register Voters</a>               </li>
+                    <a href="${pageContext.request.contextPath}/Entity/RegisterVoter_Admin.jsp"> <i class="fa fa-fw fa-user-plus"></i> Register Voters</a></li>
                 <li>
                     <a href="#" data-toggle="collapse" data-target="#submenu-1"><i class="fa fa-fw fa-user-plus"></i> Register Candidates <i class="fa fa-fw fa-angle-down pull-right"></i></a>
 
@@ -55,9 +55,11 @@
                 <li>
                     <a href="#" data-toggle="collapse" data-target="#submenu-3"><i class="fa fa-fw fa-star"></i>  Candidates<i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-3" class="collapse">
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> Personal Info</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> Political Info</a></li>
+                        <li><a href="${pageContext.request.contextPath}/Entity/candidate.jsp"><i class="fa fa-angle-double-right"></i>Candidate Info</a></li>
                     </ul>
+                </li>
+                <li>
+                    <a href="${pageContext.request.contextPath}/Entity/VoterList.jsp"><i class="fa fa-fw fa-list-ul"></i> Voter List</a>
                 </li>
 
                 <li>

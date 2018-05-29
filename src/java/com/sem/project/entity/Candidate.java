@@ -11,12 +11,12 @@ package com.sem.project.entity;
  */
 public class Candidate {
     int candidateId,age,citienshipNo;
-    String firstName,lastName,gender,maritalStatus,address,party,post;
+    String firstName,lastName,gender,maritalStatus,address,party,post,email;
 
     public Candidate() {
     }
 
-    public Candidate(int candidateId, int age, int citienshipNo, String firstName, String lastName, String gender, String maritalStatus, String address, String party, String post) {
+    public Candidate(int candidateId, int age, int citienshipNo, String firstName, String lastName, String gender, String maritalStatus, String address, String party, String post, String email) {
         this.candidateId = candidateId;
         this.age = age;
         this.citienshipNo = citienshipNo;
@@ -27,7 +27,10 @@ public class Candidate {
         this.address = address;
         this.party = party;
         this.post = post;
+        this.email = email;
     }
+
+  
 
     public int getCandidateId() {
         return candidateId;
@@ -35,6 +38,14 @@ public class Candidate {
 
     public int getAge() {
         return age;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public int getCitienshipNo() {
