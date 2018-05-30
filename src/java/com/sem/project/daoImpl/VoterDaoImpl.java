@@ -42,6 +42,7 @@ public class VoterDaoImpl implements VoterDAO {
             voter.setAddress(rs.getString("address"));
             voter.setEmail(rs.getString("email"));
             voter.setPhoto(rs.getString("photo"));
+            voter.setPassword(rs.getString("password"));
             voterList.add(voter);
         }
         db.close();
