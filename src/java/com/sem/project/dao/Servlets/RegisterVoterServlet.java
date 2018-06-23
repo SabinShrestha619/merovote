@@ -37,7 +37,6 @@ public class RegisterVoterServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-
         VoterDAO regDao = new VoterDaoImpl();
         Voter voter = new Voter();
         String plaintext = request.getParameter("password");

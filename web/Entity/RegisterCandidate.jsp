@@ -32,7 +32,7 @@
         <!-- Page Heading -->
         <div class="row" id="main" >
             <div class="col-sm-12 col-md-12 well" id="content" align="center" >
-                <h1>Registration Details</h1>
+                <h1>Enter Candidate Registration Details</h1>
 
             </div>
 

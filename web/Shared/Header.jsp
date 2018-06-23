@@ -20,7 +20,7 @@
             </button>
             <div>
             <a class="navbar-brand" href="${pageContext.request.contextPath}/index.jsp">
-            <img src="${pageContext.request.contextPath}/Images/bground.png" alt="LOGO" style="width:70px;height: 50px;">
+            <img src="${pageContext.request.contextPath}/Images/logo.png" alt="LOGO" style="width:70px;height: 50px;">
             </a>
             </div>
         </div>
@@ -31,7 +31,7 @@
                 </a>
             </li>            
             <li class="dropdown">
-                <a href="${pageContext.request.contextPath}/Entity/AdminLogin.jsp" class="btn-lg btn-sm">Admin Login </a>
+                <a href="${pageContext.request.contextPath}/Entity/AdminLogin.jsp" class="btn-lg btn-md">Admin Login </a>
                 
             </li>
         </ul>

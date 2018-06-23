@@ -7,7 +7,7 @@
             <!-- Page Heading -->
             <div class="row" id="main" >
                 <div class="col-sm-12 col-md-12 well" id="content" align="center" >
-                    <h1>Welcome to MeroVote</h1>
+                    <h1>Welcome to MeroVote Admin Mode</h1>
 
                 </div>
 

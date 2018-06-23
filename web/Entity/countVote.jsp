@@ -1,34 +1,39 @@
+<%@page import="com.sem.project.Encryption.Aes"%>
 <%@page import="com.sem.project.entity.Result"%>
 <%@page import="com.sem.project.daoImpl.ResultDaoImpl"%>
 <%@page import="com.sem.project.dao.ResultDao"%>
 <%@include file="../Shared/Header.jsp" %>
 
-
+<br>
+<br>
 <% ResultDao resultDao = new ResultDaoImpl();
 
+Aes aes=new Aes();
+
+
     if (request.getMethod().equalsIgnoreCase("post")) {
-        if ((request.getParameter("vote")).equalsIgnoreCase("congress")) {
+        if ((aes.decrypt(request.getParameter("vote"))).equalsIgnoreCase("congress")) {
             Result result = resultDao.getById(1);
             int a = result.getNumberOfVotes();
             resultDao.update((a + 1), 1);
-        } else if ((request.getParameter("vote")).equalsIgnoreCase("uml")) {
+        } else if ((aes.decrypt(request.getParameter("vote"))).equalsIgnoreCase("uml")) {
             //  uml++;
             Result result = resultDao.getById(2);
             int a = result.getNumberOfVotes();
             resultDao.update((a + 1), 2);
-         } else if ((request.getParameter("vote")).equalsIgnoreCase("bibek")) {
+         } else if ((aes.decrypt(request.getParameter("vote"))).equalsIgnoreCase("bibeksheel")) {
             //  bibek++;
             Result result = resultDao.getById(3);
             int a = result.getNumberOfVotes();
             resultDao.update((a + 1), 3);
            
-        } else if ((request.getParameter("vote")).equalsIgnoreCase("naya")) {
+        } else if ((aes.decrypt(request.getParameter("vote"))).equalsIgnoreCase("nayashakti")) {
             // naya++;
             Result result = resultDao.getById(4);
             int a = result.getNumberOfVotes();
             resultDao.update((a + 1), 4);
            
-        } else if ((request.getParameter("vote")).equalsIgnoreCase("forum")) {
+        } else if ((aes.decrypt(request.getParameter("vote"))).equalsIgnoreCase("forum")) {
             // forum++;
             Result result = resultDao.getById(5);
             int a = result.getNumberOfVotes();
