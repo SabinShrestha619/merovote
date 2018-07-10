@@ -9,8 +9,11 @@
           }else{
     document.getElementById('message').innerHTML = '';
           }
+      }
+    
+          
               
-}
+
 </script>
 <style>
     .btn-file {
@@ -97,9 +100,9 @@
             </div>
         </div>
         <div class="form-group">
-            <label  class="control-label col-xs-3">Date of Birth:</label>
+            <label  class="control-label col-xs-3">Age:</label>
             <div class="col-xs-3">
-                <input type="text" class="form-control" name="date" placeholder="Date DD/MM/YY" >
+                <input type="number" class="form-control" name="age" placeholder="Age" min="18" required><span id='error'></span>
             </div>
         </div>
         <div class="form-group">
@@ -118,7 +121,7 @@
         <div class="form-group">
             <label class="control-label col-xs-3" for="MaritalStatus" name="MaritalStatus">Marital Status:</label>
             <div class="col-xs-6" >
-                <select class="form-control">
+                <select class="form-control" name="MaritalStatus">
                     <option>Marital Status</option>
                     <option value="Married">Married</option>
                     <option value="Single">Single</option>

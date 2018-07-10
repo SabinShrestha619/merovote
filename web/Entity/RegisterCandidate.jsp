@@ -61,13 +61,13 @@
         <div class="form-group">
             <label class="control-label col-xs-3" for="party">Party:</label>
             <div class="col-xs-9">
-                <input type="password" class="form-control" name="party" placeholder="Party" required>
+                <input type="text" class="form-control" name="party" placeholder="Party" required>
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-xs-3" for="Post">Post:</label>
             <div class="col-xs-9">
-                <input type="password" class="form-control" name="post" placeholder="post" required>
+                <input type="text" class="form-control" name="post" placeholder="post" required>
             </div>
         </div>
         <div class="form-group">
@@ -87,7 +87,7 @@
         <div class="form-group">
             <label  class="control-label col-xs-3">Age:</label>
             <div class="col-xs-3">
-                <input type="Number" class="form-control" name="age" placeholder="Age" >
+                <input type="Number" class="form-control" name="age" placeholder="Age" min ="25" required>
             </div>
         </div>
         <div class="form-group">

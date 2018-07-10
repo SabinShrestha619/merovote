@@ -39,7 +39,7 @@
 
             <div class="col-xs-4">
                 <section class="login-form">
-                    <form method="post" action="#" role="login">
+                    <form method="post" action="#" autocomplete="off" role="login">
                         <img src="../Images/merologo.png" class="img-responsive" style="margin:auto"alt="" />
                         <input type="text" name="username" required class="form-control input-lg" placeholder="Username"/>
                         </br>

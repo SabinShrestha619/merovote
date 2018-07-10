@@ -10,16 +10,17 @@ package com.sem.project.entity;
  * @author sapu
  */
 public class Voter {
-    int voterId,citizenshipNo,phoneNo;
-    String firstName,lastName,gender,maritalStatus,address,email,uniqueId,password,photo,confirmPassword,dateOfBirth;
+    int voterId,citizenshipNo,phoneNo,age;
+    String firstName,lastName,gender,maritalStatus,address,email,uniqueId,password,photo,confirmPassword;
 
     public Voter() {
     }
 
-    public Voter(int voterId, int citizenshipNo, int phoneNo, String firstName, String lastName, String gender, String maritalStatus, String address, String email, String uniqueId, String password, String photo, String confirmPassword, String dateOfBirth) {
+    public Voter(int voterId, int citizenshipNo, int phoneNo, int age, String firstName, String lastName, String gender, String maritalStatus, String address, String email, String uniqueId, String password, String photo, String confirmPassword) {
         this.voterId = voterId;
         this.citizenshipNo = citizenshipNo;
         this.phoneNo = phoneNo;
+        this.age = age;
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
@@ -30,16 +31,18 @@ public class Voter {
         this.password = password;
         this.photo = photo;
         this.confirmPassword = confirmPassword;
-        this.dateOfBirth = dateOfBirth;
     }
 
-    public String getDateOfBirth() {
-        return dateOfBirth;
+    public int getAge() {
+        return age;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
+    public void setAge(int age) {
+        this.age = age;
     }
+
+
+
 
    
 

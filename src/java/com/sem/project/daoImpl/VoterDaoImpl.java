@@ -53,8 +53,8 @@ public class VoterDaoImpl implements VoterDAO {
 
     @Override
     public int insert(Voter t) throws SQLException, ClassNotFoundException {
-        String sql = "insert into register_voter( citizenshipNo, uniqueId, firstName, lastName, gender, maritalStatus, address, email, password, confirmPassword,	phoneNo, photo) "
-                + "values(?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "insert into register_voter( citizenshipNo, uniqueId, firstName, lastName, gender, Age, maritalStatus, address, email, password, confirmPassword,	phoneNo, photo) "
+                + "values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
         String uniqueID = UUID.randomUUID().toString();
                 
         t.setUniqueId(uniqueID);
@@ -66,13 +66,14 @@ public class VoterDaoImpl implements VoterDAO {
         stmt.setString(3, t.getFirstName());
         stmt.setString(4, t.getLastName());
         stmt.setString(5, t.getGender());
-        stmt.setString(6, t.getMaritalStatus());
-        stmt.setString(7, t.getAddress());
-        stmt.setString(8, t.getEmail());
-        stmt.setString(9, t.getPassword());
-        stmt.setString(10, t.getConfirmPassword());
-        stmt.setInt(11, t.getPhoneNo());
-       stmt.setString(12, t.getPhoto());
+        stmt.setInt(6, t.getAge());
+        stmt.setString(7, t.getMaritalStatus());
+        stmt.setString(8, t.getAddress());
+        stmt.setString(9, t.getEmail());
+        stmt.setString(10, t.getPassword());
+        stmt.setString(11, t.getConfirmPassword());
+        stmt.setInt(12, t.getPhoneNo());
+       stmt.setString(13, t.getPhoto());
         int result = db.update();
         db.close();
         return result;

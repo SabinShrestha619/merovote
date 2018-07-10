@@ -40,7 +40,7 @@ public class RegisterCandidateServlet extends HttpServlet {
             candidate.setMaritalStatus(request.getParameter("maritalstatus"));
             try {
                 regDao.insert(candidate);
-                response.sendRedirect("../MeroVote/index.jsp");
+                response.sendRedirect("../merovote/index.jsp");
     
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(RegisterCandidateServlet.class.getName()).log(Level.SEVERE, null, ex);
