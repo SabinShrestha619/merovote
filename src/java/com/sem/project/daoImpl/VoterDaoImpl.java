@@ -20,6 +20,7 @@ import java.util.UUID;
  * @author sapu
  */
 public class VoterDaoImpl implements VoterDAO {
+    private String a="10";
 
     private dbConnection db = new dbConnection();
 
@@ -43,6 +44,7 @@ public class VoterDaoImpl implements VoterDAO {
             voter.setEmail(rs.getString("email"));
             voter.setPhoto(rs.getString("photo"));
             voter.setPassword(rs.getString("password"));
+            voter.setPhoneNo(rs.getInt("phoneNo"));
             voterList.add(voter);
         }
         db.close();
@@ -54,11 +56,9 @@ public class VoterDaoImpl implements VoterDAO {
         String sql = "insert into register_voter( citizenshipNo, uniqueId, firstName, lastName, gender, maritalStatus, address, email, password, confirmPassword,	phoneNo, photo) "
                 + "values(?,?,?,?,?,?,?,?,?,?,?,?)";
         String uniqueID = UUID.randomUUID().toString();
-        
+                
         t.setUniqueId(uniqueID);
-        t.setMaritalStatus("fsda");
-        t.setAddress("dfa");
-        t.setPhoto("10");
+        t.setPhoto(a);
         db.connect();
         PreparedStatement stmt = db.initStatement(sql);
         stmt.setInt(1, t.getCitizenshipNo());
@@ -92,7 +92,26 @@ public class VoterDaoImpl implements VoterDAO {
 
     @Override
     public Voter getById(int id) throws SQLException, ClassNotFoundException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql = "select * from register_voter where voterId="+id;
+        db.connect();
+        db.initStatement(sql);
+        ResultSet rs = db.query();
+        rs.next();
+            Voter voter = new Voter();
+            voter.setVoterId(rs.getInt("voterId"));
+            voter.setCitizenshipNo(rs.getInt("citizenshipNo"));
+            voter.setUniqueId(rs.getString("uniqueId"));
+            voter.setFirstName(rs.getString("firstName"));
+            voter.setLastName(rs.getString("lastName"));
+            voter.setGender(rs.getString("gender"));
+            voter.setMaritalStatus(rs.getString("maritalStatus"));
+            voter.setAddress(rs.getString("address"));
+            voter.setEmail(rs.getString("email"));
+            voter.setPhoto(rs.getString("photo"));
+            voter.setPassword(rs.getString("password"));
+            voter.setPhoneNo(rs.getInt("phoneNo"));
+        db.close();
+        return voter;
     }
 
     @Override

@@ -41,7 +41,7 @@
                 <button type="button" class="list-group-item list-group-item-action">Naya Sakti<div class="pull-right"><label class="radio-inline" class="pull-right"><input id="3" type="radio" name="vote" value="<%=encrypt4 %>"></label></div></button>
                 <button type="button" class="list-group-item list-group-item-action">Forum Nepal<div class="pull-right"><label class="radio-inline" class="pull-right"><input id="4" type="radio" name="vote" value="<%=encrypt5 %>"></label></div></button>
                 </br>
-                <button type="submit"  class="btn btn-success btn-sm ">Vote</button> <button type="cancel" class=" btn btn-danger btn-sm" >Cancel</button>
+                <button type="submit"  class="btn btn-success btn-sm ">Vote</button>  <a href="../index.jsp" class="btn btn-danger">Cancel</a>
             </form>
         </div>
 

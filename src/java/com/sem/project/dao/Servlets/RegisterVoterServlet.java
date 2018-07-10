@@ -60,7 +60,6 @@ public class RegisterVoterServlet extends HttpServlet {
         try {
             voter.setCitizenshipNo(Integer.parseInt(request.getParameter("citizenshipNo")));
             voter.setFirstName(request.getParameter("firstName"));
-
             voter.setLastName(request.getParameter("lastName"));
             voter.setEmail(request.getParameter("inputEmail"));
             voter.setPassword(hashtext);
@@ -69,6 +68,8 @@ public class RegisterVoterServlet extends HttpServlet {
             voter.setPhoneNo(Integer.parseInt(request.getParameter("phoneNumber")));
             voter.setDateOfBirth((request.getParameter("date")));
             voter.setGender(request.getParameter("genderRadios"));
+            voter.setMaritalStatus((request.getParameter("MaritalStatus")));
+            
             try {
                 regDao.insert(voter);
             } catch (ClassNotFoundException ex) {
@@ -77,5 +78,6 @@ public class RegisterVoterServlet extends HttpServlet {
         } catch (SQLException ex) {
             Logger.getLogger(RegisterVoterServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
+        response.sendRedirect("../MeroVote/index.jsp");
     }
 }

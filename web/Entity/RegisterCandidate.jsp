@@ -39,7 +39,7 @@
         </div>
         <!-- /.row -->
     </div>
-    <form style="width: 60%;margin: auto;" class="form-horizontal" border="1" action="../RegisterCandidateServlet" method="post">
+    <form style="width: 60%;margin: auto;" class="form-horizontal" border="1" action="../RegisterCandidateServlet" autocomplete="off" method="post">
         <div class="form-group">
             <label class="control-label col-xs-3" for="firstName">First Name:</label>
             <div class="col-xs-9">

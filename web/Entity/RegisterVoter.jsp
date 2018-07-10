@@ -1,5 +1,17 @@
 <%@include file="../Shared/Header.jsp"%>
 <script src="../Resources/js/imageUpload.js" type="text/javascript"></script>
+<script> 
+    var check = function() {
+  if (document.getElementById('password').value !==
+    document.getElementById('confirmPassword').value) {
+    document.getElementById('message').style.color = 'red';
+    document.getElementById('message').innerHTML = 'Password did not match';
+          }else{
+    document.getElementById('message').innerHTML = '';
+          }
+              
+}
+</script>
 <style>
     .btn-file {
         position: relative;
@@ -39,7 +51,7 @@
         </div>
         <!-- /.row -->
     </div>
-    <form style="width: 60%;margin: auto;" class="form-horizontal" border="1" action="../RegisterVoterServlet" method="post">
+    <form style="width: 60%;margin: auto;" class="form-horizontal" border="1" action="../RegisterVoterServlet" autocomplete="off" method="post">
         <div class="form-group">
             <label class="control-label col-xs-3" for="firstName">First Name:</label>
             <div class="col-xs-9">
@@ -61,13 +73,13 @@
         <div class="form-group">
             <label class="control-label col-xs-3" for="password">Password:</label>
             <div class="col-xs-9">
-                <input type="password" class="form-control" name="password" placeholder="Password" required>
+                <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-xs-3" for="ConfirmPassword">Confirm Password:</label>
             <div class="col-xs-9">
-                <input type="password" class="form-control" name="confirmPassword" placeholder="Password" required>
+                <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Password" onkeyup='check();' required><span id='message'></span>
             </div>
         </div>
         <div class="form-group">
@@ -104,12 +116,12 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label col-xs-3" for="MaritalStatus">Marital Status:</label>
+            <label class="control-label col-xs-3" for="MaritalStatus" name="MaritalStatus">Marital Status:</label>
             <div class="col-xs-6" >
                 <select class="form-control">
                     <option>Marital Status</option>
-                    <option>Married</option>
-                    <option>Single</option>
+                    <option value="Married">Married</option>
+                    <option value="Single">Single</option>
                 </select>
             </div>
         </div>

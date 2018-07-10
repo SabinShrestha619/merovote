@@ -45,27 +45,27 @@
                  <li>
                     <a href="#" data-toggle="collapse" data-target="#submenu-3"><i class="fa fa-fw fa-star"></i>  Candidates<i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-3" class="collapse">
-                        <li><a href="${pageContext.request.contextPath}/Entity/candidate.jsp"><i class="fa fa-angle-double-right">Candidate Info</i></a></li>
+                        <li><a href="${pageContext.request.contextPath}/Entity/CandidateList.jsp"><i class="fa fa-angle-double-right">Candidate Info</i></a></li>
                         </ul>
                 </li>
                 <li>
-                    <a href="${pageContext.request.contextPath}/Entity/Vote.jsp"><i class="fa fa-fw fa-thumbs-up"></i>  Cast Vote</a>
+                    <a href="${pageContext.request.contextPath}/Entity/voting.jsp"><i class="fa fa-fw fa-thumbs-up"></i>  Cast Vote</a>
                 </li>
                
                 <li>
                     <a href="#" data-toggle="collapse" data-target="#submenu-2"><i class="fa fa-fw fa-star"></i>  Result<i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-2" class="collapse">
-                        <li><a href="${pageContext.request.contextPath}/Entity/Result.jsp"><i class="fa fa-angle-double-right"></i> Graph</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> PieChart</a></li>
+                        <li><a href="${pageContext.request.contextPath}/Entity/ResultBar.jsp"><i class="fa fa-angle-double-right"></i> Graph</a></li>
+                        <li><a href="${pageContext.request.contextPath}/Entity/Result.jsp"><i class="fa fa-angle-double-right"></i> Details</a></li>
                     </ul>
                 </li>
                 
                 
                 <li>
-                    <a href="http://www.election.gov.np/election/np"><i class="fa fa-fw fa-paper-plane-o"></i> News</a>
+                    <a href="http://www.election.gov.np/election/np" target="_blank"><i class="fa fa-fw fa-paper-plane-o"></i> News</a>
                 </li>
                 <li>
-                    <a href="faq"><i class="fa fa-fw fa fa-info"></i> About Us</a>
+                    <a href="${pageContext.request.contextPath}/Entity/About.jsp"><i class="fa fa-fw fa fa-info"></i> About Us</a>
                 </li>
             </ul>
         </div>

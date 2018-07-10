@@ -25,8 +25,8 @@
 
             VoterDAO voterDao = new VoterDaoImpl();
 
-            //String plaintext = request.getParameter("password");
-            String plaintext = "ram";
+            String plaintext = request.getParameter("password");
+
             StringBuilder hash = new StringBuilder();
             try {
                 MessageDigest sha = MessageDigest.getInstance("SHA-1");
@@ -43,15 +43,11 @@
             }
 
             String hashtext = hash.toString();
-            // out.println(request.getParameter("password"));
-            out.println("this is :" + hashtext);
-
-            for (Voter v : voterDao.getALL()) {
-                out.println("fuckoff:" + v.getPassword());
-                //out.println("this is pass:" + v.getPassword());
-                if ((request.getParameter("username")).equalsIgnoreCase(v.getFirstName())) {
-                    //if((hashtext).equalsIgnoreCase(v.getPassword())) {
-
+            int id = Integer.parseInt(request.getParameter("voterId"));
+            Voter v = voterDao.getById(id);
+            String pass = v.getPassword();
+            if ((request.getParameter("username")).equalsIgnoreCase(v.getFirstName())) {
+               if ((pass).equalsIgnoreCase(hashtext)) {
                     if ((request.getParameter("voterSecurityId")).equalsIgnoreCase(v.getUniqueId())) {
 
 // session = request.getSession();
@@ -61,11 +57,9 @@
                         voter.setVoterId(v.getVoterId());
                         regDao.insert(voter);
                         response.sendRedirect("../Entity/CastVote.jsp");
-                        break;
-                    }
+                 }
                 }
             }
-
 
     %>
     <script>

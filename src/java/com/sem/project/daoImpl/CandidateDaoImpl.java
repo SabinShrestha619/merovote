@@ -9,7 +9,9 @@ import com.sem.project.dao.CandidateDAO;
 import com.sem.project.database.dbConnection;
 import com.sem.project.entity.Candidate;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,7 +24,27 @@ public class CandidateDaoImpl implements CandidateDAO {
 
     @Override
     public List<Candidate> getALL() throws SQLException, ClassNotFoundException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+     List<Candidate> candidateList = new ArrayList<>();
+        String sql = "select * from register_candidate";
+        db.connect();
+        db.initStatement(sql);
+        ResultSet rs = db.query();
+        while (rs.next()) {
+            Candidate candidate = new Candidate();
+            candidate.setCandidateId(rs.getInt("candidateId"));
+            candidate.setCitienshipNo(rs.getInt("citizenshipNo"));
+            candidate.setFirstName(rs.getString("firstName"));
+            candidate.setLastName(rs.getString("lastName"));
+            candidate.setGender(rs.getString("gender"));
+            candidate.setMaritalStatus(rs.getString("maritalStatus"));
+            candidate.setAddress(rs.getString("address"));
+            candidate.setEmail(rs.getString("email"));
+            candidate.setParty(rs.getString("party"));
+            candidateList.add(candidate);
+        }
+        db.close();
+        return candidateList;
+      
     }
 
     @Override
